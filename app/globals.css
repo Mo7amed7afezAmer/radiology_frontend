@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg-base: #0d1117;
+  --bg-surface: #161b27;
+  --bg-elevated: #1e2535;
+  --bg-hover: #252d40;
+  --border: #2a3347;
+  --border-subtle: #1e2535;
+  --text-primary: #e2e8f0;
+  --text-secondary: #8896ae;
+  --text-muted: #4a5568;
+  --accent: #4f8ef7;
+  --accent-hover: #6ba3ff;
+  --accent-dim: rgba(79,142,247,0.12);
+  --success: #22c55e;
+  --warning: #f59e0b;
+  --danger: #ef4444;
+  --signed: #a78bfa;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html, body {
+  height: 100%;
+  background: var(--bg-base);
+  color: var(--text-primary);
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--text-muted); }
+
+.mono { font-family: 'JetBrains Mono', monospace; }
+
+/* Status badges */
+.badge-draft    { background: rgba(74,85,104,0.3); color: #8896ae; border: 1px solid #2a3347; }
+.badge-review   { background: rgba(245,158,11,0.15); color: #f59e0b; border: 1px solid rgba(245,158,11,0.3); }
+.badge-signed   { background: rgba(167,139,250,0.15); color: #a78bfa; border: 1px solid rgba(167,139,250,0.3); }
+.badge-final    { background: rgba(34,197,94,0.15); color: #22c55e; border: 1px solid rgba(34,197,94,0.3); }
+
+/* Tiptap editor */
+.ProseMirror { outline: none; min-height: 100%; }
+.ProseMirror p { margin-bottom: 0.5rem; }
+.ProseMirror ul { padding-left: 1.5rem; margin-bottom: 0.5rem; }
